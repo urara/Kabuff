@@ -1,5 +1,12 @@
 package id.urara.domain
 
-data class TalkGroup(val member1: String, val member2: String, val member3: String) {
+import java.util.*
+
+data class TalkGroup(val membersSet: TreeSet<String>) {
+    fun showMember() {
+        print("Team:")
+        for(member in membersSet) print(member)
+        print("¥n")
+    }
 
 }
